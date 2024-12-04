@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://lh2ka7xdf8ax"]
+
+[ext_resource type="Script" path="res://Inimigo.cs" id="1_7tfti"]
+
+[node name="Inimigo" type="Area2D"]
+script = ExtResource("1_7tfti")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]

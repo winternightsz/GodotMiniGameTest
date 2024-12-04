@@ -1,0 +1,32 @@
+[gd_scene load_steps=8 format=3 uid="uid://bwcqpb20742xu"]
+
+[ext_resource type="Script" path="res://Mundo1.cs" id="1_76tkh"]
+[ext_resource type="PackedScene" uid="uid://dw4plx6wd43i" path="res://jogador.tscn" id="2_16n56"]
+[ext_resource type="PackedScene" uid="uid://do2qc14dsrgn" path="res://npc.tscn" id="3_5cawm"]
+[ext_resource type="PackedScene" uid="uid://lh2ka7xdf8ax" path="res://inimigo.tscn" id="4_ku5a5"]
+[ext_resource type="PackedScene" uid="uid://betcaqumq5xjr" path="res://item.tscn" id="5_g8dhg"]
+[ext_resource type="PackedScene" uid="uid://b6adu73vls2ob" path="res://hud.tscn" id="6_ytga1"]
+[ext_resource type="PackedScene" uid="uid://bsqeaw70gy4ov" path="res://tile_map_layer.tscn" id="7_8t113"]
+
+[node name="Mundo1" type="Node2D"]
+script = ExtResource("1_76tkh")
+
+[node name="NPCS" type="Node2D" parent="."]
+
+[node name="NPC" parent="NPCS" instance=ExtResource("3_5cawm")]
+
+[node name="Inimigos" type="Node2D" parent="."]
+
+[node name="Inimigo" parent="Inimigos" instance=ExtResource("4_ku5a5")]
+
+[node name="Itens" type="Node2D" parent="."]
+
+[node name="Item" parent="Itens" instance=ExtResource("5_g8dhg")]
+
+[node name="HUD" parent="." instance=ExtResource("6_ytga1")]
+visible = false
+
+[node name="TileMapLayer" parent="." instance=ExtResource("7_8t113")]
+
+[node name="Jogador" parent="." instance=ExtResource("2_16n56")]
+position = Vector2(296, 509)

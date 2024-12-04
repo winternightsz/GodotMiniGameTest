@@ -1,0 +1,26 @@
+# Godot 4+ specific ignores
+.godot/
+/android/
+
+# Diretórios de build e exportação
+/bin/
+export.cfg
+export_presets.cfg
+
+# Metadados de importação de recursos
+.import/
+
+# Arquivos de cache gerados pela Godot
+*.tmp
+*.import
+*.converted
+*.fscache
+*.shader_cache
+
+# Logs
+*.log
+*.log~
+
+# Arquivos do sistema operacional
+.DS_Store
+Thumbs.db
