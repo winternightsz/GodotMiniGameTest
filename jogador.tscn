@@ -327,7 +327,7 @@ script = ExtResource("1_12cvp")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_cyp7r")
-frame_progress = 0.561981
+frame_progress = 0.0581951
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 top_level = true

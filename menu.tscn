@@ -1,0 +1,61 @@
+[gd_scene load_steps=8 format=3 uid="uid://c3rs1u0tto33e"]
+
+[ext_resource type="Script" path="res://Menu.cs" id="1_jca60"]
+[ext_resource type="Texture2D" uid="uid://dloiduxf1ec6v" path="res://assets/tilemap_packed.png" id="2_b7n0x"]
+[ext_resource type="Texture2D" uid="uid://tcvwuxcs072x" path="res://assets/tile_0066.png" id="3_entrt"]
+[ext_resource type="Texture2D" uid="uid://63qdtl1m4mjo" path="res://assets/tile_0067.png" id="4_w14u2"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_csfwg"]
+texture = ExtResource("2_b7n0x")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_noafa"]
+sources/1 = SubResource("TileSetAtlasSource_csfwg")
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_qgpbr"]
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jca60")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+scale = Vector2(16, 13)
+tile_map_data = PackedByteArray(0, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0)
+tile_set = SubResource("TileSet_noafa")
+
+[node name="Label" type="Label" parent="."]
+modulate = Color(0.47451, 0.32549, 0.168627, 1)
+material = SubResource("CanvasItemMaterial_qgpbr")
+layout_mode = 0
+offset_left = 235.0
+offset_top = 159.0
+offset_right = 309.0
+offset_bottom = 182.0
+scale = Vector2(4, 4)
+text = "CARDOJO"
+uppercase = true
+
+[node name="PlayButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 320.0
+offset_top = 312.0
+offset_right = 352.0
+offset_bottom = 344.0
+scale = Vector2(4, 4)
+texture_normal = ExtResource("3_entrt")
+texture_hover = ExtResource("4_w14u2")
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 365.0
+offset_top = 362.0
+offset_right = 405.0
+offset_bottom = 385.0
+text = "Jogar
+"
